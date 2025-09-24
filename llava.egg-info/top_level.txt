@@ -1,4 +1,0 @@
-checkpoints
-imgs
-llava
-wandb

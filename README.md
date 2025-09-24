@@ -27,7 +27,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/opendatalab/FakeVLM?color=critical&label=Issues)](https://github.com/opendatalab/FakeVLM/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/opendatalab/FakeVLM?style=social)](https://github.com/opendatalab/FakeVLM/stargazers)
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/lingcco/FakeClue)
-
+[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-yellow)](https://huggingface.co/lingcco/fakeVLM)
 </div>
 
 <!-- <div align="center">
@@ -62,14 +62,14 @@ git clone git@github.com:opendatalab/FakeVLM.git
 cd FakeVLM
 ```
 
-Our model is based on the llava environment. Please follow the steps below to configure the environment.
+Our model is based on the [lmms-finetune](baidu.com) environment. Please follow the steps below to configure the environment.
 ```bash
-conda create -n fakevlm python=3.9 -y
+conda create -n fakevlm python=3.10 -y
 conda activate fakevlm
-pip install --upgrade pip  
-pip install -e .
-pip install -e ".[train]"
-pip install flash-attn --no-build-isolation
+
+python -m pip install -r requirements.txt
+
+python -m pip install --no-cache-dir --no-build-isolation flash-attn
 ```
 
 ## 📦 Dataset
@@ -93,7 +93,37 @@ playground
 
 
 ## 📌 Usage
+### 1. Data Preparation
+The training data can be downloaded from [here](https://huggingface.co/datasets/lingcco/FakeClue).
 
+Please download the dataset and unzip the images.
+### 2. Train
+
+Replace data paths with yours in `scripts/train.sh` and  model path with yours in `supported_models.py`.
+
+```
+bash train.sh
+```
+
+### 3. Eval
+
+We prepared two scripts for you to evaluate the FakeVLM model.
+
+#### 1. Usual evaluation 
+
+```
+bash scripts/eval.sh
+```
+
+#### 2. Evaluation with vllm
+
+Considering the size of the model and the magnitude of the data, we recommend using vllm for evaluation. Please make sure that you have installed vllm.
+
+
+```
+# change scripts/eval.py to scripts/eval_vllm.py in scripts/eval.sh
+bash scripts/eval.sh
+```
 ## 📊 Results
 Performance of 7 leading LMMs and FakeVLM on DD-VQA, Fake Clues and Loki.
 
@@ -119,7 +149,7 @@ To provide a comprehensive comparison of the model performance across the three 
 
 ## 😄 Acknowledgement
 
-This repository is built upon the work of [LLaVA](https://github.com/haotian-liu/LLaVA/tree/main). We appreciate their contributions and insights that have provided a strong foundation for our research.
+This repository is built upon the work of [LLaVA](https://github.com/haotian-liu/LLaVA/tree/main), and our codebase is built upon [lmms-finetune](https://github.com/zjysteven/lmms-finetune). We appreciate their contributions and insights that have provided a strong foundation for our research.
 
 ## 📨 Contact
 
