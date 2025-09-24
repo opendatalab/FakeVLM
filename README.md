@@ -38,7 +38,7 @@
 </div> -->
 
 ## 📰 News
-- **[2025.9.24]**: 🎉 FakeVLM was accepted to Nips 2025! 
+- **[2025.9.24]**: 🎉 FakeVLM was accepted to NeurIPS 2025! 
 - **[2025.4.15]**: 🤗 We are excited to release the FakeClue dataset. Check out [here](https://huggingface.co/datasets/lingcco/FakeClue).
 - **[2025.3.20]**: 🔥 We have released **Spot the Fake: Large Multimodal Model-Based Synthetic Image Detection with Artifact Explanation**. Check out the [paper](https://arxiv.org/abs/2503.14905). We present FakeClue dataset and FakeVLM model.
 
@@ -100,7 +100,7 @@ The training data can be downloaded from [here](https://huggingface.co/datasets/
 Please download the dataset and unzip the images.
 ### 2. Train
 
-Replace data paths with yours in `scripts/train.sh` and  model path with yours in `supported_models.py`.
+Replace data paths with yours in `scripts/train.sh` and the original [llava-1.5-7b-hf](https://huggingface.co/llava-hf/llava-1.5-7b-hf) model path with yours in `supported_models.py`.
 
 ```
 bash train.sh
@@ -108,7 +108,7 @@ bash train.sh
 
 ### 3. Evaluation
 
-We prepared two scripts for you to evaluate the FakeVLM model.
+We prepared two scripts for you to evaluate the FakeVLM model. The trained FakeVLM model is available at [here](https://huggingface.co/lingcco/fakeVLM).
 
 #### 1. Usual evaluation 
 
