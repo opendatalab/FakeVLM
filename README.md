@@ -106,7 +106,7 @@ Replace data paths with yours in `scripts/train.sh` and  model path with yours i
 bash train.sh
 ```
 
-### 3. Eval
+### 3. Evaluation
 
 We prepared two scripts for you to evaluate the FakeVLM model.
 
