@@ -38,6 +38,7 @@
 </div> -->
 
 ## 📰 News
+- **[2025.9.24]**: 🎉 FakeVLM was accepted to Nips 2025! 
 - **[2025.4.15]**: 🤗 We are excited to release the FakeClue dataset. Check out [here](https://huggingface.co/datasets/lingcco/FakeClue).
 - **[2025.3.20]**: 🔥 We have released **Spot the Fake: Large Multimodal Model-Based Synthetic Image Detection with Artifact Explanation**. Check out the [paper](https://arxiv.org/abs/2503.14905). We present FakeClue dataset and FakeVLM model.
 

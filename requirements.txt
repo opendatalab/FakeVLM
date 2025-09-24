@@ -20,7 +20,7 @@ fonttools==4.60.0
 fsspec==2025.9.0
 gitdb==4.0.12
 GitPython==3.1.45
-gradio==5.46.1
+gradio==5.46.11
 gradio_client==1.13.1
 groovy==0.1.2
 h11==0.16.0
